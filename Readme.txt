@@ -1,6 +1,5 @@
 setting.rbの値をいじれば動きます
-
-iNCPushをサーバーで実行してください
+iNCPushをサーバーなんかで実行してください
 
 ・twitterアカウント
 	L https://twitter.com/
