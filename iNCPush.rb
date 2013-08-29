@@ -1,5 +1,4 @@
 # encoding: utf-8
-require './setting'
 require 'digest/sha1'
 require 'net/http'
 require 'json'
@@ -7,6 +6,7 @@ require 'tweetstream'
 require 'twitter'
 require 'pp'
 
+#-----------------------------------------module_start------------------------------------------------------------#
 module IM
  class Kayac
    HOST = 'im.kayac.com'
@@ -54,15 +54,30 @@ module IM
  end
 end
 
+#-----------------------------------------module_end--------------------------------------------------------------#
 
-iNC = IM::Kayac.new(TO_ID,:Id=>MY_ID, :password =>PAS,:sig=>SIG)
+to_id =[送る相手のim.kayacID]
+my_id =[自分のim.kayacのID]
+pas   =[パスワードが設定されているならそれを(ログインパスではない)]
+sig   =[秘密鍵を設定しているならそれを]
 
-#Ck/Cs
+CONSUMER_KEY    = [twitterのコンシューマーキー]
+CONSUMER_SECRET = [コンシューマシークレット]
+OAUTH_TOKEN     = [アクセストークン]
+OAUTH_SECRET    = [アクセスシークレット]
+
+
+
+
+iNC = IM::Kayac.new(to_id,:id=>my_id, :password =>pas,:sig=>sig)
+
+#CK/CS登録適用
   Twitter.configure do |config|
   config.consumer_key       = CONSUMER_KEY
   config.consumer_secret    = CONSUMER_SECRET
   config.oauth_token        = OAUTH_TOKEN
   config.oauth_token_secret = OAUTH_SECRET
+  
 end
 
   TweetStream.configure do |config|
@@ -71,7 +86,7 @@ end
   config.oauth_token        = OAUTH_TOKEN
   config.oauth_token_secret = OAUTH_SECRET
   config.auth_method        = :oauth
-end
+  end
 
 
 client = TweetStream::Client.new

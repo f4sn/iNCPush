@@ -1,6 +1,6 @@
-setting.rbの値をいじれば動きます
+日本語で書いてある所の値をいじれば動きます
 
-iNCPushをサーバーで実行してください
+これそのものをサーバーで実行してください
 
 ・twitterアカウント
 	L https://twitter.com/
@@ -10,6 +10,5 @@ iNCPushをサーバーで実行してください
 	L http://im.kayac.com/
 ・rubyを動かせるサーバー
 	L http://www.sakura.ne.jp/
-	L http://www.host1free.com/
 
 が必要です
