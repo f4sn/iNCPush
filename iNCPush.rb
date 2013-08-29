@@ -57,7 +57,6 @@ end
 
 iNC = IM::Kayac.new(TO_ID,:Id=>MY_ID, :password =>PAS,:sig=>SIG)
 
-#Ck/Cs
   Twitter.configure do |config|
   config.consumer_key       = CONSUMER_KEY
   config.consumer_secret    = CONSUMER_SECRET
