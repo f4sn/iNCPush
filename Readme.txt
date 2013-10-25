@@ -11,4 +11,6 @@ iNCPushをサーバーなんかで実行してください
 	L http://www.sakura.ne.jp/
 	L http://www.host1free.com/
 
-が必要です
+あと、iPhoneに https://itunes.apple.com/jp/app/im.kayac.com-free-edition/id336129317?mt=8
+はインストールしないと通知は来ません
+
